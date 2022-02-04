@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>마이페이지</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<link  rel= "바로가기 아이콘"  href= "/img/favicon.ico"  type= "image/x-icon" > 
+<link  rel= "icon"  href= "/img/favicon.ico"  type= "image/x-icon" >
+	<link rel="stylesheet" href="./css/ban.css">
+	<link rel="stylesheet" href="./css/newCommon.css" />	
+<style>
+input { outline:0; border:0;  border-radius:0;  }
+.content {  width: 1200px; margin:0 auto; clear:both; height: 400px;}
+.con_tit{margin-left: 44%; margin-top: 100px; margin-bottom: 60px; clear:both;}
+.list { margin: 40px auto; }  
+.t1 { padding: 20px 18px; background-color:#bbc9d8; }
+.t2 { padding: 0 18px;  background-color:#bbc9d8;}
+.t3 { padding: 0 18px;  background-color:#bbc9d8;}
+.t4 { padding: 0 50px;  background-color:#bbc9d8;}
+.t5 { padding: 0 16px;  background-color:#bbc9d8;}
+.t6 { padding: 0 110px;  background-color:#bbc9d8;}
+.t7 { padding: 0 18px;  background-color:#bbc9d8;}
+.t8 { padding: 0 30px;  background-color:#bbc9d8;}
+.mem td { text-align:center; padding-top:10px; padding-bottom:10px}
+.in_btn { display:block; height:40px; line-height:40px; width:130px; float:left; border-radius:22px; background:#333; color:#fff; margin-left:20px; 
+cursor:pointer; }
+.in_btn:hover { background-color:#6f87a1; }
+.list { margin: 0 auto; }
+.btn { clear: both; display: block; margin-left: 448px; margin-top: 60px; margin-bottom: 40px;}
+</style>
+</head>
+<body>
+<div class="wrap">
+    <header class="hd">
+        <div class="hd_wrap">
+            <nav class="tnb">
+                <ul class="left">
+                    <li><a href=""><strong>BRANDLESS</strong></a></li>
+                </ul>
+                <a href="main.jsp" class="logo"> <img src="./img/logob.jpg"
+                    alt="앰블럼이미지">
+                </a>
+                <ul class="right">
+                    <li>yuri 님 환영합니다</li> 
+                    <li><a href="login.html">로그인</a></li>
+                    <li><a href="agreement.html">회원가입</a></li><br>
+                    <li><a href="productlist2.html">제품 관리</a></li>
+                    <li><a href="memberlist.html">회원관리</a></li>
+                    <li><a href="mypage.html">마이페이지</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="hd_wrap">
+            <nav class="gnb">
+                <ul>
+                    <li><a href="index.html" class="dp1">home</a></li>
+                    <li><a href="Brandstory.html" class="dp1">Brand story</a></li>
+                    <li><a href="showRoom.html" class="dp1">쇼룸안내</a></li>
+                    <li><a href="productlist.html" class="dp1">제품목록</a></li>
+                    <li><a href="noticelist.html" class="dp1">게시판</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+	<div class="content">
+	<h1 class="con_tit">마이페이지</h1>
+		<table border="1"  cellpadding="6" cellspacing="0" class="list"> 
+			<tr class="notitable">
+				<th class="t1">아이디</th>
+				<th class="t2">비밀번호</th>
+				<th class="t3">성명</th>
+				<th class="t4">연락처</th>
+				<th class="t5">우편번호</th>
+				<th class="t6">상세주소</th>
+				<th class="t7">직업</th>
+				<th class="t8">가입일</th>
+			</tr>
+			<tr class="mem">
+				<td>yuri</td>
+				<td>1234</td>
+				<td>임유리</td>
+				<td>010-9474-4723</td>
+				<td>38201</td>
+				<td>경기도 고양시 덕양구 </td>
+				<td>군인</td>
+				<td>2022-01-23</td>
+			</tr>
+		</table>
+		<div class="btn">
+			<span class="fr_col first">
+                <a href="memberModify.html" class="in_btn" >정보수정</a>
+			</span>
+			<span class="fr_col last">
+				<input type="reset" value="뒤로가기" class="in_btn" onclick="goBack()"/>
+			</span>
+		</div>
+	</div>
+</div>
+<footer class="ft">
+    <div class="ft_wrap">
+        <div class="row2">
+            <nav class="ft_link">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="sub02.html">ABOUT US</a></li>
+                    <li><a href="sub03.html">AGREEMENT</a></li>
+                    <li><a href="sub04.html">PRIVACY POLICY</a></li>
+                    </ul>
+                    <div class="goto_top"><a href="">GOTO TOP ▲</a></div>	
+            </nav>
+        <div class="addr">
+        <p>COMPANY :RNC Korea OWNER :서진원<br>
+                ADDRESS : 06241 서울특별시 강남구 테헤란로4길 38-3 (역삼동) 다우빌딩 601호<br>
+                BUSINESS LICENSE : [144-01-14252] ONLINE LICENSE 2012-경기성남-1076 [사업자정보확인]<br>
+                TEL : 1522-7048 FAX : 02-538-7248 E-MAIL : brandless@naver.com<br>
+                WORK TIME : 평일 : 08시-17시30분 주말/공휴일 휴무</p>
+        </div>
+                <p class="copyright">Copyright © 브랜드리스. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>임유리</title>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<link rel="stylesheet" href="common2.css">
+<style>
+     body,html { overflow-x: hidden; }    
+    .vs_fr { width: 100vw; height: 100vh; overflow:hidden; }
+    .page_wrap { clear:both; width: 1200px; margin: 0 auto; 
+    position:relative; }
+.photo_data { width: 300px; height: 300px; overflow:hidden; 
+    border-radius:150px; overflow:hidden; position:absolute; 
+    top: 150px; left: 150px; animation-name:intro_pic; margin-top: -80px;
+animation-duration:5s; animation-delay:0.8s; animation-fill-mode: both; animation-timing-function: ease-out; }
+
+    .photo_data img { display:block; width: 100%; height:auto; }
+    .intro_con { width: 600px; float:right; }
+    .intro_con li {clear: both; }
+    .intro_con li span { display:inline-block; text-align: justify; text-justify:inter-character; padding: 10px; }
+    .intro_con li .intro_item_tit { width: 100px; font-size:20px; }
+    .intro_con li .intro_item_con { display:none; }
+</style>
+</head>
+<body>
+    <!-- <script>
+        var telList = new Array('iPhone','iPod','BlackBerry','Android','Window CE','LG','MOT','SAMSUNG','SonyEricsson');
+        for(var tel in telList){
+            if(navigator.userAgent.match(telList[tel]) != null){
+                console.log("모바일");
+                location.href="mobile.html";
+            } else {
+                console.log("데스크탑");
+                location.href="desktop.html";
+            }
+        }
+    </script> -->
+<div class="wrap">
+    <header class="hd">
+        <nav class="gnb">
+            <ul>
+                <li><button pos="0">HOME</button></li>
+                <li><button pos="1">정보</button></li>
+                <li><button pos="2">스킬</button></li>
+                <li><button pos="3">포트폴리오 갤러리</button></li>
+                <li><button pos="4">Contact</button></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="content">
+        <figure class="vs">
+            <div class="vs_fr">
+                <div class="tit">
+                    <h1>안녕하세요,<br>
+                    임유리의 포트폴리오 입니다</h1>
+                </div>
+            </div>
+        </figure>
+        <section class="page" id="page1">
+            <div class="page_wrap">
+                <h2 class="page_tit">정보</h2>
+                <div class="photo_data">
+                    <img src="me2.jpg" alt="" width=310px; height=300px;>
+                </div>
+                <ul class="intro_con">
+                    <li class="item1"><span class="intro_item_tit">이름</span><span class="intro_item_con">임유리</span></li>
+                    <li class="item2"><span class="intro_item_tit">생년</span><span class="intro_item_con">1998</span></li>
+                    <li class="item3"><span class="intro_item_tit">희망직종</span><span class="intro_item_con">웹 개발자(BackEnd or FrontEnd)</span></li>
+                    <li class="item4"><span class="intro_item_tit">희망지역</span><span class="intro_item_con">경기+서울 지역</span></li>
+                    <li class="item5"><span class="intro_item_tit">주소지</span><span class="intro_item_con">고양시 덕양구 도내동</span></li>
+                </ul>
+            </div>
+            <script>
+            $(function(){
+                $(".intro_con li").each(function(){
+                    $(this).find(".intro_item_con").delay($(this).index()*500).fadeIn(1000);
+                });    
+            });    
+            </script>
+        </section>
+        <section class="page" id="page2">
+            <div class="page_wrap">
+                <h2 class="page_tit">스킬</h2>
+                <div class="photo_data">
+                    <img src="me2.jpg" alt="" width=310px; height=300px;>
+                </div>
+                <ul class="intro_con">
+                    <li class="item1"><span class="intro_item_tit">이름</span><span class="intro_item_con">임유리</span></li>
+                    <li class="item2"><span class="intro_item_tit">생년</span><span class="intro_item_con">1998</span></li>
+                    <li class="item3"><span class="intro_item_tit">희망직종</span><span class="intro_item_con">웹 개발자(BackEnd or FrontEnd)</span></li>
+                    <li class="item4"><span class="intro_item_tit">희망지역</span><span class="intro_item_con">경기+서울 지역</span></li>
+                    <li class="item5"><span class="intro_item_tit">주소지</span><span class="intro_item_con">고양시 덕양구 도내동</span></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+</body>
+</html>
