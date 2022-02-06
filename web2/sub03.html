@@ -4,22 +4,29 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <!-- 파비콘 -->
-        <!-- 메타정보 -->
-        <!-- 오픈그래프 -->
-        <!-- 폰트 파일 불러오기 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
-        <!-- css 파일 초기화 -->
-        <!-- 외부스타일 -->
-        <link rel="stylesheet" href="common.css">
-        <link rel="stylesheet" href="ban.css">
-        <style>
-        /* font-family: 'Nanum Gothic', sans-serif;
-    font-family: 'Noto Sans KR', sans-serif;   */
-        </style>
-        <title></title>
+       <!-- 파비콘 -->
+    <meta http-equiv="Expires" content="0">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <!-- 메타정보 -->
+    <link rel="canonical" href="https://www.nikon-image.co.kr/">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="/css/reset.css?rev=1637543744">
+    <link type="text/css" rel="stylesheet" href="/css/main.css?rev=1637543744">
+    <link rel="stylesheet" href="/css/layout.css?rev=1637543744">
+    <!-- 오픈그래프 -->
+    <meta id="ogImage" property="og:image" content="https://www.nikon-image.co.kr/img/common/logo.jpg">
+    <meta id="ogTitle" property="og:title" content="(주)니콘이미징코리아">
+    <meta id="ogDes" property="og:description" content="(주)니콘이미징코리아">
+    <!-- 폰트 파일 불러오기 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <!-- css 파일 초기화 -->
+    <!-- 외부스타일 -->
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/ban.css">
         <style>
         .tit { clear: both; }
         .content { clear:both; width:100%; min-height:900px; }
@@ -46,8 +53,8 @@
     .vs { clear:both; width:900px; margin: 0 auto; }
     .vs img { display:block; width: 100%; height:auto; margin-top: 50px; margin-bottom: 50px;}
     .map_area { width: 600px; height: 400px; clear:both; margin:20px auto; position:relative; }    
-    .ft { clear:both; height: 120px; background-color: #333; }
-    .ft_wrap { width: 1000px; margin: 0 auto; padding-top:20px; padding-bottom:20px; color:#fff; }
+    .coc { margin-bottom: 30px; }
+    .con_data { margin: 0 auto; width: 1000px; }
 
     .strong { clear:both; display:block; border-bottom: 2px solid; float: left; color: rgb(46, 46, 46); font-size:30px; font-weight:bold; margin-bottom: 10px; }
     .en { clear:both;  color: rgb(139, 139, 139); font-size:15px;}
@@ -62,13 +69,17 @@
         <header class="hd">
             <div class="hd_wrap">
                 <div class="hd1">
-                    <a href="" class="logo"><img src="./img/logo_01.png" alt="앰블럼이미지"></a>
+                    <a href="index.html" class="logo"><img src="./img/logo_01.png" alt="앰블럼이미지" width="85px" height="85px" ></a>
                     <nav class="tnb">
                         <p class="site_tit">Nikon Imaging | Korea</p>
                         <a href="" class="global_link">Global Site</a>
                         <ul class="tnb_link">
-                            <li><a href="">로그인</a></li>
-                            <li><a href="">회원가입</a></li>
+                            <li><span style="display: block; font-weight:bold;">yuri 님</span></li>
+                            <li><a href="MyPageCtrl.html">마이 페이지</a></li>
+                            <li><a href="GetUserInListCtrl.html">장바구니</a></li>
+                            <li><a href="GetUserPaymentListCtrl.html">구입내역</a></li>
+                            <li><a href="LogoutCtrl">로그아웃</a></li>
+                            <li><a href="OutCtrl">회원탈퇴</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -78,51 +89,15 @@
                     <nav class="gnb">
                         <ul class="main_menu">
                             <li><a href="index.html" class="dp1">HOME</a></li>
-                            <li><a href="" class="dp1">제품정보</a>
-                                <ul class="sub thumbnail">
-                                    <li><a href="">
-                                        <img src="./img/icon_menu01.png" alt="SLR 카메라" class="menu1_img">
-                                        <span class="menu1_txt">SLR 카메라</span>
-                                    </a></li>
-                                    <li><a href="">
-                                        <img src="./img/icon_menu02.png" alt="미러리스 카메라" class="menu1_img">
-                                        <span class="menu1_txt">미러리스 카메라</span>
-                                    </a></li>
-                                    <li><a href="">
-                                        <img src="./img/icon_menu03.png" alt="콤텍트 카메라" class="menu1_img">
-                                        <span class="menu1_txt">콤텍트 카메라</span>
-                                    </a></li>
-                                    <li><a href="">
-                                        <img src="./img/icon_menu04.png" alt="렌즈" class="menu1_img">
-                                        <span class="menu1_txt">렌즈</span>
-                                    </a></li>
-                                </ul>
-                            </li>
-                            <li><a href="" class="dp1">이벤트</a>
-                                <ul class="sub">
-                                    <li><a href="">진행 중인 이벤트</a></li>
-                                    <li><a href="">종료 이벤트 및 당첨자 발표</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="" class="dp1">고객지원</a></li>
-                            <li><a href="" class="dp1">E Shop</a>
-                                <ul class="sub">
-                                    <li><a href="">제품별 구매</a></li>
-                                    <li><a href="">타임 세일</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="" class="dp1">니콘 스쿨</a>
-                                <ul class="sub">
-                                    <li><a href="">니콘 스쿨 안내</a></li>
-                                    <li><a href="">공지사항</a></li>
-                                    <li><a href="">니콘 스쿨 게시판</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="getProductList.html" class="dp1">제품정보</a></li>
+                            <li><a href="support.html" class="dp1">기업정보</a></li>
+                            <li><a href="notice.html" class="dp1">공지사항</a></li>
+                            <li><a href="" class="dp1">니콘 스쿨</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
-        </header>
+        </header> 
         <div class="content">
             <div class="breadcrumb">
                 <h2 class="tit">사이트 이용약관</h2>
@@ -146,7 +121,7 @@
             <section class="con">
                 
                 <div class="con_data">
-                    <div class="">
+                    <div class="coc">
                         <span class="strong">사이트 이용약관</span> 
                         <span class="en">Terms of Use</span>
                     </div>
@@ -358,9 +333,7 @@
                             </textarea>
                         </div>
                     </div>
-
                 </div>  
-                  
             </section> 
         </div>
         <footer class="ft">

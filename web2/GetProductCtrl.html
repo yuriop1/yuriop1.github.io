@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>상품 상세 보기</title>
+<!-- 파비콘 -->
+<meta http-equiv="Expires" content="0">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Cache-Control" content="no-cache">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+<!-- 메타정보 -->
+<link rel="canonical" href="https://www.nikon-image.co.kr/">
+<link rel="shortcut icon" href="/img/favicon.ico">
+<link rel="stylesheet" href="/css/reset.css?rev=1637543744">
+<link type="text/css" rel="stylesheet" href="/css/main.css?rev=1637543744">
+<link rel="stylesheet" href="/css/layout.css?rev=1637543744">
+<!-- 오픈그래프 -->
+<meta id="ogImage" property="og:image" content="https://www.nikon-image.co.kr/img/common/logo.jpg">
+<meta id="ogTitle" property="og:title" content="(주)니콘이미징코리아">
+<meta id="ogDes" property="og:description" content="(주)니콘이미징코리아">
+<!-- 폰트 파일 불러오기 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+<!-- css 파일 초기화 -->
+<!-- 외부스타일 -->
+<link rel="stylesheet" href="./css/common.css">
+<link rel="stylesheet" href="./css/ban.css">
+<!-- 합쳐지고 최소화된 최신 CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<!-- 부가적인 테마 -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+<!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="./css/ban.css">
+<link rel="stylesheet" href="./css/common.css">
+<style>
+ul { list-style: none; }
+.tit { font-size:48px; text-align: center; }
+.logo { float:left; }
+.tnb { float:right; }
+.tnb li { float:left; margin-left:15px; height: 42px;  }
+.tnb li a { display:block; height:42px; line-height: 42px; }
+#gnb { clear:both; }
+.btn-default { color:#fff; background-image: linear-gradient(to bottom,#111 0,#222 100%); }
+.btn-default:hover { background-color:deepskyblue; }
+</style>
+<script src="js/jquery-latest.js"></script>
+</head>
+<body>
+    <header class="hd">
+        <div class="hd_wrap">
+            <div class="hd1">
+                <a href="index.html" class="logo"><img src="./img/logo_01.png" alt="앰블럼이미지" width="85px" height="85px" ></a>
+                <nav class="tnb">
+                    <p class="site_tit">Nikon Imaging | Korea</p>
+                    <a href="" class="global_link">Global Site</a>
+                    <ul class="tnb_link">
+                        <li><span style="display: block; font-weight:bold;">yuri 님</span></li>
+                        <li><a href="MyPageCtrl.html">마이 페이지</a></li>
+                        <li><a href="GetUserInListCtrl.html">장바구니</a></li>
+                        <li><a href="GetUserPaymentListCtrl.html">구입내역</a></li>
+                        <li><a href="LogoutCtrl">로그아웃</a></li>
+                        <li><a href="OutCtrl">회원탈퇴</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <div class="hd_wrap">
+            <div class="gnb_wrap">
+                <nav class="gnb">
+                    <ul class="main_menu">
+                        <li><a href="index.html" class="dp1">HOME</a></li>
+                        <li><a href="getProductList.html" class="dp1">제품정보</a></li>
+                        <li><a href="support.html" class="dp1">기업정보</a></li>
+                        <li><a href="notice.html" class="dp1">공지사항</a></li>
+                        <li><a href="" class="dp1">니콘 스쿨</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header> 
+    <div class="container">
+        <h2 class="tit">상품 구매 하기</h2>
+        <form action="" method="post" name="frm">
+            <table class="table">
+                <tr>	
+                    <th class="item1">상품타입</th>
+                    <td class="item2">
+                        <input type="hidden" name="pcode" id="pcode" value="${pro.getPcode() }" />
+                        <input type="hidden" name="mid" id="mid" value="${session.getAttribute('mid') }" />
+                        <h4>카메라</h4>
+                    </td>
+                </tr>
+                <tr>	
+                    <th class="item1">상품명</th>
+                    <td class="item2">
+                        <h4>D6</h4>
+                    </td>
+                </tr>
+                <tr>
+                    <th class="item1">상품설명</th>
+                    <td class="item2">
+                        <p class="procom">프로는 운에 맡기지 않는다</p>
+                    </td>
+                </tr>
+                <tr>	
+                    <th class="item1">가격</th>
+                    <td class="item2">
+                        <input type="hidden" name="price" id="price" value="${pro.getPprice() }" />
+                        <p class="price">7,980,000</p>
+                    </td>
+                </tr>
+                <tr>	
+                    <th class="item1">수량</th>
+                    <td class="item2">
+                        <input type="number" name="cnt" id="cnt" max="" min="1" value="1"/>
+                    </td>
+                </tr>
+                <tr>	
+                    <th class="item1">상품 이미지</th>
+                    <td class="item2">
+                        <c:if test="">
+                            <img src="./img/d6.png" alt="D6"  class="thumbnail_img"/>
+                        </c:if>
+                    </td>
+                </tr>				
+            </table>
+            <!--  버튼 그룹 -->
+            <div class="btn-group">
+                <a href="javascript:" onclick="payAction()" class="btn btn-primary">구매</a>
+                <a href="GetUserInListCtrl.html" class="btn btn-primary">장바구니 담기</a>
+                <a href="getProductList.html" class="btn btn-primary"> 목록</a>
+            </div>
+        </form>
+        <script>
+        function payAction(){
+            var cnt = document.getElementById("cnt").value;
+            location.href="payment.jsp?num="+cnt;
+        </script>
+        <h3>이용후기</h3>
+        <form action="AddImpressCtrl">
+            <table class="table">
+                <tbody>
+                <c:forEach items="${impressList }" var="impress" varStatus="status">
+                    <tr>
+                        <td>제품이름</td>
+                        <td>아이디</td>
+                            <td><a href="">댓글삭제</a></td>
+                    </tr>
+                </tbody>
+                </c:forEach>
+            </table>
+            <input type="hidden" name="cusid" value="아이디" />
+            <input type="hidden" name="proid" value="닉네임" />
+            <input type="text" name="subject" id="subject" size="150" placeholder="이용후기를 써주세요" required /><br><br>
+            <div class="btn-group">
+                <input type="submit" value="이용후기 등록" class="btn btn-primary"/>
+            </div>
+        </form>
+    </div>
+    <footer class="ft">
+        <div class="ft_wrap">
+            <nav class="sns_link">
+                <ul>
+                    <li><a href="" class="blog"></a></li>
+                    <li><a href="" class="facebook"></a></li>
+                    <li><a href="" class="utb"></a></li>
+                    <li><a href="" class="insta"></a></li>
+                    <li><a href="" class="npost"></a></li>
+                </ul>
+            </nav>
+            <nav class="fnb">
+                <ul>
+                    <li><a href="">회사소개</a></li>
+                    <li><a href="">제품정보</a></li>
+                    <li><a href="">이벤트</a></li>
+                    <li><a href="">고객지원</a></li>
+                    <li><a href="">회원제도</a></li>
+                </ul>
+            </nav>
+            <div class="row1">
+                <span class="ft_logo">(주)니콘이미징코리아</span>
+                <div class="sel_fr">
+                    <select name="" id="loc_link">
+                        <option value="">Family Site</option>
+                        <option value="">사이트2</option>
+                        <option value="">사이트3</option>
+                        <option value="">사이트4</option>
+                    </select>
+                    <div class="goto_top"><a href="">GOTO TOP ▲</a></div>
+                </div>
+            </div>
+            <div class="row2">
+                <nav class="ft_link">
+                    <ul>
+                        <li><a href="sub01.html">오시는 길</a></li>
+                        <li><a href="sub02.html">개인정보처리방침</a></li>
+                        <li><a href="sub03.html">사이트 이용약관</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="addr">
+                    <p>상호명 : 주식회사 니콘이미징코리아 / 대표이사 : 정해환 / 사업자등록번호 : 104-81-98839 / 통신판매업신고 : 제2018-서울강남-00065호 <br>
+                    주소 : 서울특별시 강남구 테헤란로 87길 36 도심공항타워 22층 (㉾06164) <br>
+                    전화번호 : 080-800-6600 / 팩스 : 02-2068-8488 / 이메일 : Support.Nikc@nikon.com <br>
+                    호스팅제공자 : 주식회사 인터넷이니시어티브</p>
+                </div>
+                <p class="copyright">© 2021 Nikon Imaging Korea CO., LTD</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
